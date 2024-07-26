@@ -27,6 +27,9 @@ class FeedForward(nn.Module):
             nn.Dropout(dropout)
         ])
 
+    def forward(self, x):
+        return self.net(x)
+
 class Block(nn.Module):
     def __init__(self, n_embd, n_head):
         pass
